@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: flex-start; /* Align sections at the top */
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header img {  /* added to make logo smaller */
+    width:170px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .header-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-links a, .header-links button {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .header-links a:hover, .header-links button:hover {
+    color: #007BFF;
+  }
+
+  .search-container {
+    margin: 2rem 0;
+  }
+
+  .search-container input {
+    width: 50%;
+    padding: 0.8rem;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .card-container { /* ok im not using the cards na for the main images pero ginagamit pa din sa subpages or whatever*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    width: 200px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* made image size 200*200 */
+  .card img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .image-container a { /* these image containers for the main page na pics lang instead of pics in cards */
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .image-container a:hover {
+    transform: scale(1.1); 
+  }
+
+  .image-container a img {
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  section {
+    display: none;
+    padding: 2rem;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  .details {
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .details img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .details p {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .back-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-button:hover {
+    background-color: #555;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left-section .right-section {
+    max-width: 45%; /* Ensures sections don’t stretch too far */
+    min-width: 0;
+    text-align: center;
+  }
+
+  .left-section .side-by-side {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .right-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    text-align: center;
+    justify-content: end;
+    gap: 20px;
+  }
+
+  .left-section { /*all the footer stuff*/
+    text-align: left;
+  }
+  .left-section .side-by-side {
+    display: flex;
+    gap: 10px;
+  }
+  .right-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto); 
+    grid-template-rows: repeat(4, auto); 
+    text-align: center;
+    justify-content: end; 
+    gap: 20px; 
+  }
+
+  .footer a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: #007BFF;
+  }
+
+  .footer button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .footer button:hover {
+    color: #007BFF;
+  }
+
+  .lastf {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+  }

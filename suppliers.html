@@ -1,0 +1,155 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suppliers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-links">
+      <button onclick="window.location.href='index.html'">
+        <img src="B2Pinoy Logo.png" alt="Find Suppliers">
+      </button>
+      <a href="#about-us">About Us</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#customer-support">Customer Support</a>
+    </div>
+  </header>
+
+  <!-- Supplier Section -->
+  <h2>Find Suppliers</h2>
+  <div class="image-container">
+    <a href="placeholder.html">
+      <img src="galvanizedsteel.png" alt="Galvanized Steel">
+    </a>
+    <a href="placeholder.html">
+      <img src="hollowblocks.png" alt="Hollow Blocks">
+    </a>
+    <a href="placeholder.html">
+      <img src="testsupplier.png" alt="Test Supplier">
+    </a>
+  </div>
+  <button class="back-button" onclick="location.href='index.html'">Back</button>
+
+    <!-- Supplier Details Pages -->
+  <section id="supplier-a-details">
+    <div class="details">
+      <img src="supplier-a.jpg" alt="Supplier A">
+      <h2>Supplier A</h2>
+      <p>Supplier A provides high-quality packaging solutions for businesses, specializing in custom packaging and logistics.</p>
+      <p><strong>Services:</strong> Packaging, logistics, and custom designs.</p>
+      <button class="back-button" onclick="goBack('suppliers')">Back</button>
+    </div>
+  </section>
+
+  <section id="supplier-b-details">
+    <div class="details">
+      <img src="supplier-b.jpg" alt="Supplier B">
+      <h2>Supplier B</h2>
+      <p>Supplier B offers top-notch ingredients for the food industry, providing raw materials and wholesale food supplies.</p>
+      <p><strong>Services:</strong> Raw materials, wholesale food supply, and consultation.</p>
+      <button class="back-button" onclick="goBack('suppliers')">Back</button>
+    </div>
+  </section>
+
+  <section id="supplier-c-details">
+    <div class="details">
+      <img src="supplier-c.jpg" alt="Supplier C">
+      <h2>Supplier C</h2>
+      <p>Supplier C offers reliable logistics and delivery services for businesses, ensuring timely and secure transportation.</p>
+      <p><strong>Services:</strong> Transport, delivery, and supply chain management.</p>
+      <button class="back-button" onclick="goBack('suppliers')">Back</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 B2Pinoy.com</p>
+  </footer>
+  
+  <script>
+    const data = {
+      suppliers: {
+        "Supplier A": {
+          image: "supplier-a.jpg",
+          description: "Supplier A provides high-quality packaging solutions for businesses.",
+          services: "Packaging, logistics, and custom designs."
+        },
+        "Supplier B": {
+          image: "supplier-b.jpg",
+          description: "Supplier B offers top-notch ingredients for the food industry.",
+          services: "Raw materials, wholesale food supply, and consultation."
+        },
+        "Supplier C": {
+          image: "supplier-c.jpg",
+          description: "Supplier C offers reliable logistics and delivery services.",
+          services: "Transport, delivery, and supply chain management."
+        }
+      },
+      jobs: {
+        "Job A": {
+          image: "job-a.jpg",
+          description: "Job A offers a managerial role with competitive salary and benefits.",
+        },
+        "Job B": {
+          image: "job-b.jpg",
+          description: "Job B is an entry-level marketing position ideal for fresh graduates.",
+        },
+        "Job C": {
+          image: "job-c.jpg",
+          description: "Job C is a remote IT support role for tech-savvy professionals.",
+        }
+      },
+      services: {
+        "Service A": {
+          image: "service-a.jpg",
+          description: "Service A offers IT consulting specializing in cloud solutions.",
+        },
+        "Service B": {
+          image: "service-b.jpg",
+          description: "Service B provides legal services in corporate law.",
+        },
+        "Service C": {
+          image: "service-c.jpg",
+          description: "Service C is a digital marketing agency that helps businesses grow.",
+        }
+      },
+      franchises: {
+        "Franchise A": {
+          image: "franchise-a.jpg",
+          description: "Franchise A offers a fast-food chain opportunity with low investment.",
+        },
+        "Franchise B": {
+          image: "franchise-b.jpg",
+          description: "Franchise B provides a premium coffee shop franchise.",
+        },
+        "Franchise C": {
+          image: "franchise-c.jpg",
+          description: "Franchise C is a fitness center offering global business opportunities.",
+        }
+      }
+    };
+
+    function showSection(sectionId) {
+      document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    function goBack(sectionId) {
+      showSection(sectionId);
+    }
+
+    function showDetails(type, name) {
+      const detailsSection = document.getElementById(`${name.toLowerCase().replace(/ /g, '-')}-details`);
+      document.querySelectorAll('section').forEach(section => section.classList.remove('active'));
+      detailsSection.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>
