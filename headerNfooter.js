@@ -42,9 +42,9 @@ class B2PFooter extends HTMLElement {
           </div>
 
           <div class="right-section">
-            <p><strong>About B2Pinoy</strong></p>
-            <p><strong>Careers</strong></p>
-            <p><strong>Customer Support</strong></p>
+            <p class="top"><strong>About B2Pinoy</strong></p>
+            <p class="top"><strong>Careers</strong></p>
+            <p class="top"><strong>Customer Support</strong></p>
             <p><a href="aboutus.html">About Us</a></p>
             <p><a href="placeholder.html">Be a Supplier!</a></p>
             <p><a href="placeholder.html">Contact Us</a></p>

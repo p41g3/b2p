@@ -9,232 +9,39 @@
   
 </head>
 <body>
-
+  <div class="main-content">
   <!-- Header -->
   <b2p-header></b2p-header>
 
-  <!-- Landing Page -->
+  <div class = "content">
+    <!-- Search Bar -->
   <section id="landing" class="active">
     <div class="search-container">
       <input type="text" placeholder="Search for Philippine-based Businesses...">
     </div>
 
-    <!-- will change image names to be all small caps :D -->
-    <!-- removed the cards -->
+    <!-- Landing Page Buttons -->
     <div class="image-container">
       <a href="suppliers.html">
-        <img src="Landing Screen Buttons/Supplier.png" alt="Find Suppliers">
+        <img src="Landing Page Buttons/Supplier.png" alt="Find Suppliers">
       </a>
       <a href="franchises.html">
-        <img src="Landing Screen Buttons/Franchise.png" alt="Franchise Listings">
+        <img src="Landing Page Buttons/Franchise.png" alt="Franchise Listings">
       </a>
       <a href="services.html">
-        <img src="Landing Screen Buttons/Service.png" alt="Acquire a Service">
+        <img src="Landing Page Buttons/Service.png" alt="Acquire a Service">
       </a>
       <a href="jobs.html">
-        <img src="Landing Screen Buttons/Jobs.png" alt="Look for a Job">
+        <img src="Landing Page Buttons/Jobs.png" alt="Look for a Job">
       </a>
     </div>
+  </div>
     
-  </section>
-
-  <!-- Suppliers Section -->
-  <section id="suppliers">
-    <h2>Find Suppliers</h2>
-    <div class="card-container">
-      <div class="card" onclick="showDetails('suppliers', 'Supplier A')">
-        <img src="supplier-a.jpg" alt="Supplier A">
-        <h3>Supplier A</h3>
-      </div>
-      <div class="card" onclick="showDetails('suppliers', 'Supplier B')">
-        <img src="supplier-b.jpg" alt="Supplier B">
-        <h3>Supplier B</h3>
-      </div>
-      <div class="card" onclick="showDetails('suppliers', 'Supplier C')">
-        <img src="supplier-c.jpg" alt="Supplier C">
-        <h3>Supplier C</h3>
-      </div>
-    </div>
-    <button class="back-button" onclick="goBack('landing')">Back</button>
-  </section>
-
-  <!-- Supplier Details Pages -->
-  <section id="supplier-a-details">
-    <div class="details">
-      <img src="supplier-a.jpg" alt="Supplier A">
-      <h2>Supplier A</h2>
-      <p>Supplier A provides high-quality packaging solutions for businesses, specializing in custom packaging and logistics.</p>
-      <p><strong>Services:</strong> Packaging, logistics, and custom designs.</p>
-      <button class="back-button" onclick="goBack('suppliers')">Back</button>
-    </div>
-  </section>
-
-  <section id="supplier-b-details">
-    <div class="details">
-      <img src="supplier-b.jpg" alt="Supplier B">
-      <h2>Supplier B</h2>
-      <p>Supplier B offers top-notch ingredients for the food industry, providing raw materials and wholesale food supplies.</p>
-      <p><strong>Services:</strong> Raw materials, wholesale food supply, and consultation.</p>
-      <button class="back-button" onclick="goBack('suppliers')">Back</button>
-    </div>
-  </section>
-
-  <section id="supplier-c-details">
-    <div class="details">
-      <img src="supplier-c.jpg" alt="Supplier C">
-      <h2>Supplier C</h2>
-      <p>Supplier C offers reliable logistics and delivery services for businesses, ensuring timely and secure transportation.</p>
-      <p><strong>Services:</strong> Transport, delivery, and supply chain management.</p>
-      <button class="back-button" onclick="goBack('suppliers')">Back</button>
-    </div>
-  </section>
-
-  <!-- Jobs Section -->
-  <section id="jobs">
-    <h2>Find Jobs</h2>
-    <div class="card-container">
-      <div class="card" onclick="showDetails('jobs', 'Job A')">
-        <img src="job-a.jpg" alt="Job A">
-        <h3>Job A</h3>
-      </div>
-      <div class="card" onclick="showDetails('jobs', 'Job B')">
-        <img src="job-b.jpg" alt="Job B">
-        <h3>Job B</h3>
-      </div>
-      <div class="card" onclick="showDetails('jobs', 'Job C')">
-        <img src="job-c.jpg" alt="Job C">
-        <h3>Job C</h3>
-      </div>
-    </div>
-    <button class="back-button" onclick="goBack('landing')">Back</button>
-  </section>
-
-  <!-- Job Details Pages -->
-  <section id="job-a-details">
-    <div class="details">
-      <img src="job-a.jpg" alt="Job A">
-      <h2>Job A</h2>
-      <p>Job A offers a managerial role with competitive salary and benefits, ideal for candidates with leadership experience.</p>
-      <button class="back-button" onclick="goBack('jobs')">Back</button>
-    </div>
-  </section>
-
-  <section id="job-b-details">
-    <div class="details">
-      <img src="job-b.jpg" alt="Job B">
-      <h2>Job B</h2>
-      <p>Job B is an entry-level position in marketing, perfect for fresh graduates with a passion for digital marketing.</p>
-      <button class="back-button" onclick="goBack('jobs')">Back</button>
-    </div>
-  </section>
-
-  <section id="job-c-details">
-    <div class="details">
-      <img src="job-c.jpg" alt="Job C">
-      <h2>Job C</h2>
-      <p>Job C is a remote IT support role, suitable for tech-savvy professionals looking for flexible work arrangements.</p>
-      <button class="back-button" onclick="goBack('jobs')">Back</button>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Acquire a Service</h2>
-    <div class="card-container">
-      <div class="card" onclick="showDetails('services', 'Service A')">
-        <img src="service-a.jpg" alt="Service A">
-        <h3>Service A</h3>
-      </div>
-      <div class="card" onclick="showDetails('services', 'Service B')">
-        <img src="service-b.jpg" alt="Service B">
-        <h3>Service B</h3>
-      </div>
-      <div class="card" onclick="showDetails('services', 'Service C')">
-        <img src="service-c.jpg" alt="Service C">
-        <h3>Service C</h3>
-      </div>
-    </div>
-    <button class="back-button" onclick="goBack('landing')">Back</button>
-  </section>
-
-  <!-- Service Details Pages -->
-  <section id="service-a-details">
-    <div class="details">
-      <img src="service-a.jpg" alt="Service A">
-      <h2>Service A</h2>
-      <p>Service A offers professional consulting in the IT sector, specializing in cloud solutions and system integrations.</p>
-      <button class="back-button" onclick="goBack('services')">Back</button>
-    </div>
-  </section>
-
-  <section id="service-b-details">
-    <div class="details">
-      <img src="service-b.jpg" alt="Service B">
-      <h2>Service B</h2>
-      <p>Service B provides comprehensive legal services, specializing in corporate law and intellectual property protection.</p>
-      <button class="back-button" onclick="goBack('services')">Back</button>
-    </div>
-  </section>
-
-  <section id="service-c-details">
-    <div class="details">
-      <img src="service-c.jpg" alt="Service C">
-      <h2>Service C</h2>
-      <p>Service C is a digital marketing agency that helps businesses improve their online presence and reach a wider audience.</p>
-      <button class="back-button" onclick="goBack('services')">Back</button>
-    </div>
-  </section>
-
-  <!-- Franchises Section -->
-  <section id="franchises">
-    <h2>Franchise Listings</h2>
-    <div class="card-container">
-      <div class="card" onclick="showDetails('franchises', 'Franchise A')">
-        <img src="franchise-a.jpg" alt="Franchise A">
-        <h3>Franchise A</h3>
-      </div>
-      <div class="card" onclick="showDetails('franchises', 'Franchise B')">
-        <img src="franchise-b.jpg" alt="Franchise B">
-        <h3>Franchise B</h3>
-      </div>
-      <div class="card" onclick="showDetails('franchises', 'Franchise C')">
-        <img src="franchise-c.jpg" alt="Franchise C">
-        <h3>Franchise C</h3>
-      </div>
-    </div>
-    <button class="back-button" onclick="goBack('landing')">Back</button>
-  </section>
-
-  <!-- Franchise Details Pages -->
-  <section id="franchise-a-details">
-    <div class="details">
-      <img src="franchise-a.jpg" alt="Franchise A">
-      <h2>Franchise A</h2>
-      <p>Franchise A offers a fast-food chain opportunity with low capital investment and high return potential.</p>
-      <button class="back-button" onclick="goBack('franchises')">Back</button>
-    </div>
-  </section>
-
-  <section id="franchise-b-details">
-    <div class="details">
-      <img src="franchise-b.jpg" alt="Franchise B">
-      <h2>Franchise B</h2>
-      <p>Franchise B provides a premium coffee shop franchise with high-quality products and a strong brand.</p>
-      <button class="back-button" onclick="goBack('franchises')">Back</button>
-    </div>
-  </section>
-
-  <section id="franchise-c-details">
-    <div class="details">
-      <img src="franchise-c.jpg" alt="Franchise C">
-      <h2>Franchise C</h2>
-      <p>Franchise C is a well-known fitness center with a global presence, offering excellent business opportunities.</p>
-      <button class="back-button" onclick="goBack('franchises')">Back</button>
-    </div>
   </section>
 
   <!-- Footer -->
   <b2p-footer></b2p-footer>
+  </div>
 
 </body>
 </html>

@@ -1,9 +1,25 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    align-items: flex-start; /* Align sections at the top */
+    align-items: flex-start;
     background-color: #f9f9f9;
     overflow-x: hidden;
   }
@@ -15,9 +31,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px;
   }
 
-  header img {  /* added to make logo smaller */
+  header img {
     width:170px;
     height: auto;
     object-fit: cover;
@@ -62,7 +79,7 @@ body {
     border-radius: 4px;
   }
 
-  .card-container { /* ok im not using the cards na for the main images pero ginagamit pa din sa subpages or whatever*/
+  .card-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -86,7 +103,6 @@ body {
     transform: scale(1.05);
   }
 
-  /* made image size 200*200 */
   .card img {
     width: 100%; 
     height: 200px;
@@ -94,7 +110,7 @@ body {
     border-radius: 4px;
   }
 
-  .image-container a { /* these image containers for the main page na pics lang instead of pics in cards */
+  .image-container a {
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -160,12 +176,6 @@ body {
   .back-button:hover {
     background-color: #555;
   }
-
-  footer p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-  }
   
   footer {
     margin-top: 2rem;
@@ -178,13 +188,19 @@ body {
     width: 100%;
   }
 
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+
   .left-section .right-section {
-    max-width: 45%; /* Ensures sections don’t stretch too far */
+    max-width: 45%;
     min-width: 0;
     text-align: center;
   }
 
-  .left-section { /*all the footer stuff*/
+  .left-section {
     text-align: left;
   }
 
@@ -198,14 +214,19 @@ body {
     display: grid;
     grid-template-columns: repeat(3, auto); 
     grid-template-rows: repeat(4, auto); 
-    text-align: center;
+    text-align: left;
     justify-content: end; 
-    gap: 20px; 
+    gap: 30px; 
+  }
+
+  .right-section .top {
+    color: #000;
+    font-weight: bold; 
   }
 
   .footer a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
     transition: color 0.3s ease;
   }
