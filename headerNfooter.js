@@ -6,7 +6,7 @@ class B2PHeader extends HTMLElement {
               <button onclick="location.href='index.html'">
                 <img src="Logos/b2p.png" alt="Find Suppliers" />
               </button>
-              <a href="placeholder.html">About Us</a>
+              <a href="aboutus.html">About Us</a>
               <a href="placeholder.html">FAQs</a>
               <a href="placeholder.html">Customer Support</a>
             </div>
@@ -42,10 +42,10 @@ class B2PFooter extends HTMLElement {
           </div>
 
           <div class="right-section">
-            <p><strong><a href="placeholder.html">About B2Pinoy</a></strong></p>
-            <p><strong><a href="placeholder.html">Careers</a></strong></p>
-            <p><strong><a href="placeholder.html">Customer Support</a></strong></p>
-            <p><a href="placeholder.html">About Us</a></p>
+            <p><strong>About B2Pinoy</strong></p>
+            <p><strong>Careers</strong></p>
+            <p><strong>Customer Support</strong></p>
+            <p><a href="aboutus.html">About Us</a></p>
             <p><a href="placeholder.html">Be a Supplier!</a></p>
             <p><a href="placeholder.html">Contact Us</a></p>
             <p><a href="placeholder.html">Privacy Policy</a></p>
