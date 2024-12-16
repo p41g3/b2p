@@ -5,20 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jobs</title>
   <link rel="stylesheet" href="style.css">
+  <script src="headerNfooter.js" type="module"></script>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="header-links">
-      <button onclick="showSection('landing')">
-        <img src="B2Pinoy Logo.png" alt="Find Suppliers">
-      </button>
-      <a href="#about-us">About Us</a>
-      <a href="#faqs">FAQs</a>
-      <a href="#customer-support">Customer Support</a>
-    </div>
-  </header>
+  <b2p-header></b2p-header>
+
 
   <!-- Landing Page -->
   <section id="landing" class="active">
@@ -28,6 +21,7 @@
 
   <!-- Jobs Section -->
     <h2>Find Jobs</h2>
+    
     <div class="card-container">
       <div class="card" onclick="showDetails('jobs', 'Job A')">
         <img src="job-a.jpg" alt="Job A">
@@ -42,6 +36,67 @@
         <h3>Job C</h3>
       </div>
     </div>
+
+    <div class="card-container">
+      <div class="card" onclick="showDetails('jobs', 'Job A')">
+        <img src="job-a.jpg" alt="Job A">
+        <h3>Job A</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job B')">
+        <img src="job-b.jpg" alt="Job B">
+        <h3>Job B</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job C')">
+        <img src="job-c.jpg" alt="Job C">
+        <h3>Job C</h3>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" onclick="showDetails('jobs', 'Job A')">
+        <img src="job-a.jpg" alt="Job A">
+        <h3>Job A</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job B')">
+        <img src="job-b.jpg" alt="Job B">
+        <h3>Job B</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job C')">
+        <img src="job-c.jpg" alt="Job C">
+        <h3>Job C</h3>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" onclick="showDetails('jobs', 'Job A')">
+        <img src="job-a.jpg" alt="Job A">
+        <h3>Job A</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job B')">
+        <img src="job-b.jpg" alt="Job B">
+        <h3>Job B</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job C')">
+        <img src="job-c.jpg" alt="Job C">
+        <h3>Job C</h3>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" onclick="showDetails('jobs', 'Job A')">
+        <img src="job-a.jpg" alt="Job A">
+        <h3>Job A</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job B')">
+        <img src="job-b.jpg" alt="Job B">
+        <h3>Job B</h3>
+      </div>
+      <div class="card" onclick="showDetails('jobs', 'Job C')">
+        <img src="job-c.jpg" alt="Job C">
+        <h3>Job C</h3>
+      </div>
+    </div>
+    
     <button class="back-button" onclick="location.href='index.html'">Back</button>
 
   <!-- Job Details Pages -->
@@ -73,9 +128,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 B2Pinoy.com</p>
-  </footer>
+  <b2p-footer></b2p-footer>
 
   <script>
     const data = {

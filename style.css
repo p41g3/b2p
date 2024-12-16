@@ -184,28 +184,16 @@ body {
     text-align: center;
   }
 
-  .left-section .side-by-side {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .right-section {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(4, auto);
-    text-align: center;
-    justify-content: end;
-    gap: 20px;
-  }
-
   .left-section { /*all the footer stuff*/
     text-align: left;
   }
+
   .left-section .side-by-side {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 5px;
   }
+
   .right-section {
     display: grid;
     grid-template-columns: repeat(3, auto); 
