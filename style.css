@@ -104,7 +104,7 @@ body {
   }
   
   .search::placeholder,
-  .search-bar-icon {
+  .search-icon {
     color: rgba(0, 0, 0, 0.5);
   }  
   
