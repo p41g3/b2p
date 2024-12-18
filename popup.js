@@ -1,17 +1,16 @@
-// show popup and blur bg
+// show popup
 function showPopup() {
   document.getElementById("popup").style.display = "block";
 }
 
-// hide popup and remove blur
+// hide popup
 function hidePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
 // close popup when click x
 window.onclick = function (event) {
-  const modal = document.getElementById("popup");
-  if (event.target === modal) {
-    hideModal();
+  if (event.target === document.getElementById("popup")) {
+    hidePopup();
   }
 };

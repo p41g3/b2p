@@ -25,7 +25,7 @@ class B2PHeader extends HTMLElement {
                   </button>
                   <a href="aboutus.html">About Us</a>
                   <a href="faqs.html">FAQs</a>
-                  <a href="#" onclick="showPopup()">Customer Support</a>
+                  <span class="modal-header" onclick="showPopup()">Customer Support</span>
                 </div>
               </header>
 
@@ -78,13 +78,13 @@ class B2PFooter extends HTMLElement {
             <p class="top"><strong>Customer Support</strong></p>
             <p><a href="aboutus.html">About Us</a></p>
             <p><a href="placeholder.html">Be a Supplier!</a></p>
-            <p><a href="#" onclick="showPopup()">Contact Us</a></a></p>
+            <p><span class="modal-footer" onclick="showPopup()">Contact Us</span></p>
             <p><a href="placeholder.html">Privacy Policy</a></p>
             <p><a href="placeholder.html">Promote your Service!</a></p>
             <p><a href="placeholder.html">B2Pinoy Verified</a></p>
             <p><a href="placeholder.html">B2Pinoy Foundation</a></p>
             <p><a href="placeholder.html">List your Franchise!</a></p>
-            <p><a href="#" onclick="showPopup()">Help Center</a></a></p>
+            <p><span class="modal-footer" onclick="showPopup()">Help Center</span></p>
           </div>
         </footer>
 

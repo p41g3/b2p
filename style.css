@@ -51,8 +51,8 @@ body {
     align-items: center;
     width: 100%;
   }
-
-  .header-links a, .header-links button {
+  
+  .header-links a, .header-links button { /* I can optimize this pa a lot fuck*/
     text-decoration: none;
     font-size: 16px;
     color: #333;
@@ -97,6 +97,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1001;
     font-size: 2em;
+  }
+
+  /* same as header links but had to redo cuz this is not a link */
+  /* is there a way to combine them all?? */
+  .modal-header { 
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .modal-header:hover {
+    color: #007BFF;
   }
 
   .close {
@@ -263,7 +277,7 @@ body {
     gap: 30px; 
     box-sizing: border-box;
     max-width: 50%;
-    overflow-x: auto;
+    overflow-x: hidden;
     margin-right: 50px;
   }
   
@@ -282,16 +296,22 @@ body {
     color: #007BFF;
   }
 
-  .footer button {
+  /* literally same as footer a, ill work on combining the two though...*/
+  .modal-footer { 
     text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+    font-size: 14px;
+    color: #333;
     transition: color 0.3s ease;
   }
 
-  .footer button:hover {
+  .modal-footer:hover {
     color: #007BFF;
+  }
+
+  .footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .copyright {
