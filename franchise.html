@@ -1,0 +1,76 @@
+<!-- copy paste to every file  (i cant reuse scripts fk)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="popup.js"></script>
+  <script src="reuse.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B2Pinoy.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"/>
+</head>
+
+<body>
+  <div class="main-content">
+    <!-- Header -->
+    <b2p-header></b2p-header>
+
+    <div class = "content">
+      
+      <!-- Search Bar -->
+      <h1> Search for Philippine-based Businesses! </h1>
+      <div>
+        <form action="">
+          <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="e.g. Got Clothing, Restaurant Franchise, Packaging, etc.">
+          </div>
+        </form>
+      </div>
+      
+      <!-- Content -->
+      
+      <div class ="supplier">
+        <div class="container">
+          <!-- Left Section (Images) -->
+          <div class="left-sectionn">
+              <img src="Franchise Photos/Potato Corner/logo.jpg" alt="Potato Corner Logo" class="logo">
+              <div class="images-section">
+                  <img src="Franchise Photos/Potato Corner/1.jpg" alt="Food Cart" class="small-img">
+                  <img src="Franchise Photos/Potato Corner/2.jpg" alt="Fries" class="small-img">
+                  <img src="Franchise Photos/Potato Corner/3.jpg" alt="Giga Fries" class="small-img">
+                  <img src="Franchise Photos/Potato Corner/4.jpg" alt="Franchise Stall" class="small-img">
+              </div>
+          </div>
+          
+          <!-- Right Section (Text) -->
+          <div class="right-sectionn">
+              <h1>Potato Corner</h1>
+              <p><strong>Food and Beverage</strong></p>
+              <p><strong>Initial Investment Cost:</strong> Php 50k</p>
+              <p><strong>Franchise type:</strong> Food Cart/Stall</p>
+              <p><strong>Location Availability:</strong> Metro Manila</p>
+              
+              <!-- Contact Details -->
+              <div class="contact">
+                  <p><strong>Contact Details:</strong></p>
+                  <p>potatocorner@gmail.com</p>
+                  <p>0922-123-1234</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="back-button" onclick="location.href='franchises.html'">Back</button>
+      <!-- how do I make this button go to the last page visited??-->
+
+      <!-- Footer -->
+      <b2p-footer></b2p-footer>
+    </div>
+  
+  </div>
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 // reuse most of <head>
+// tngina i need to make the title ng tab separate pala
 class B2PHead extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -13,7 +14,7 @@ class B2PHead extends HTMLElement {
 
 customElements.define('b2p-head', B2PHead);
 
-// reuse most of <header>
+// reuse <header>
 class B2PHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -47,7 +48,7 @@ class B2PHeader extends HTMLElement {
 
 customElements.define('b2p-header', B2PHeader);
 
-// reuse most of <footer>
+// reuse <footer>
 class B2PFooter extends HTMLElement {
   connectedCallback() {
       this.innerHTML = `

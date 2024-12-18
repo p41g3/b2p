@@ -141,7 +141,7 @@ body {
     border-radius: 50px;
     background: #e7e7e7 ;
     transition: background 0.25s, box-shadow 0.25s;
-    margin: 0 auto; /* Centers within the container */
+    margin: 0 auto;
   }
   
   .search input {
@@ -320,3 +320,77 @@ body {
     color: #555;
     padding-bottom: 15px;
   }
+
+/* suppliers specific page: */
+
+.supplier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.container {
+  display: flex;
+  background-color: #fff;
+  width: max-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-sectionn {
+  background-color: #f2f2f2;
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.small-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.small-img:hover {
+  transform: scale(1.1);
+}
+
+.right-sectionn {
+  flex: 1;
+  padding: 30px;
+  text-align: left;
+}
+
+.right-sectionn h1 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.right-sectionn p {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #555;
+}
+
+.contact {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
