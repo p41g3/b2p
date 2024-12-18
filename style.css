@@ -245,6 +245,7 @@ body {
 
   .left-section {
     text-align: left;
+    margin-left: 50px;
   }
 
   .left-section .side-by-side {
@@ -263,6 +264,7 @@ body {
     box-sizing: border-box;
     max-width: 50%;
     overflow-x: auto;
+    margin-right: 50px;
   }
   
   .right-section .top {

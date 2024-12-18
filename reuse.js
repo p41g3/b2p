@@ -17,8 +17,6 @@ customElements.define('b2p-head', B2PHead);
 class B2PHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-              <!-- Wrapper for background content -->
-            <div id="header">
               <!-- Header Section -->
               <header>
                 <div class="header-links">
@@ -27,17 +25,16 @@ class B2PHeader extends HTMLElement {
                   </button>
                   <a href="aboutus.html">About Us</a>
                   <a href="faqs.html">FAQs</a>
-                  <a href="#" onclick="showModal()">Customer Support</a>
+                  <a href="#" onclick="showPopup()">Customer Support</a>
                 </div>
               </header>
-            </div>
 
             <!-- Modal -->
             <div id="popup" class="modal">
               <div class="modal-content">
-                <span class="close" onclick="hideModal()">&times;</span>
-                <h1>Questions?</h1>
-                <p>Hit us up!</p>
+                <span class="close" onclick="hidePopup()">&times;</span>
+                <h2 style="margin-bottom: 25px;">Questions?</h2>
+                <p style="margin-top: 25px;" >Hit us up!</p>
                 <h4 style="margin-bottom: 8px;">Listing Inquiries</h4>
                 <p style="margin-top: 8px; font-size: 14px;"><u>sales.b2pinoy@gmail.com</u></p>
                 <h4 style="margin-bottom: 8px;">Customer Support</h4>
@@ -81,17 +78,17 @@ class B2PFooter extends HTMLElement {
             <p class="top"><strong>Customer Support</strong></p>
             <p><a href="aboutus.html">About Us</a></p>
             <p><a href="placeholder.html">Be a Supplier!</a></p>
-            <p><a href="placeholder.html">Contact Us</a></p>
+            <p><a href="#" onclick="showPopup()">Contact Us</a></a></p>
             <p><a href="placeholder.html">Privacy Policy</a></p>
             <p><a href="placeholder.html">Promote your Service!</a></p>
             <p><a href="placeholder.html">B2Pinoy Verified</a></p>
             <p><a href="placeholder.html">B2Pinoy Foundation</a></p>
             <p><a href="placeholder.html">List your Franchise!</a></p>
-            <p><a href="placeholder.html">Help Center</a></p>
+            <p><a href="#" onclick="showPopup()">Help Center</a></a></p>
           </div>
         </footer>
 
-        <p class="copyright" id="copyright">© 2024 B2Pinoy.com</p>
+        <p class="copyright">© 2024 B2Pinoy.com</p>
       `;
   }
 }
