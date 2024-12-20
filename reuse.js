@@ -22,7 +22,7 @@ class B2PHeader extends HTMLElement {
               <header>
                 <div class="header-links">
                   <button onclick="location.href='index.html'">
-                    <img src="Logos/b2p.png" alt="Find Suppliers" />
+                    <img src="Logos/b2p.png" alt="Find Suppliers"/>
                   </button>
                   <a href="aboutus.html">About Us</a>
                   <a href="faqs.html">FAQs</a>
@@ -36,9 +36,9 @@ class B2PHeader extends HTMLElement {
                 <span class="close" onclick="hidePopup()">&times;</span>
                 <h2 style="margin-bottom: 25px;">Questions?</h2>
                 <p style="margin-top: 25px;" >Hit us up!</p>
-                <h4 style="margin-bottom: 8px;">Listing Inquiries</h4>
+                <h5 style="margin-bottom: 8px;">Listing Inquiries</h5>
                 <p style="margin-top: 8px; font-size: 14px;"><u>sales.b2pinoy@gmail.com</u></p>
-                <h4 style="margin-bottom: 8px;">Customer Support</h4>
+                <h5 style="margin-bottom: 8px;">Customer Support</h5>
                 <p style="margin-top: 8px; font-size: 14px;"><u>cs.b2pinoy@gmail.com</u></p>
               </div>
             </div>
