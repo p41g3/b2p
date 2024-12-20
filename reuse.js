@@ -34,12 +34,12 @@ class B2PHeader extends HTMLElement {
             <div id="popup" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="hidePopup()">&times;</span>
-                <h2 style="margin-bottom: 25px;">Questions?</h2>
-                <p style="margin-top: 25px;" >Hit us up!</p>
+                <h2>Questions?</h2>
+                <p style ="font-size:2rem; mar">Hit us up!</h4>
                 <h5 style="margin-bottom: 8px;">Listing Inquiries</h5>
-                <p style="margin-top: 8px; font-size: 14px;"><u>sales.b2pinoy@gmail.com</u></p>
+                <p><u>sales.b2pinoy@gmail.com</u></p>
                 <h5 style="margin-bottom: 8px;">Customer Support</h5>
-                <p style="margin-top: 8px; font-size: 14px;"><u>cs.b2pinoy@gmail.com</u></p>
+                <p><u>cs.b2pinoy@gmail.com</u></p>
               </div>
             </div>
         `;
@@ -55,20 +55,20 @@ class B2PFooter extends HTMLElement {
         <footer class="footer" id="footer">
           <div class="left-section">
             <button onclick="location.href='placeholder.html'">
-              <img src="Logos/b2p.png" alt="B2Pinoy" height="80px" width=auto>
+              <img src="Logos/b2p.png" alt="B2Pinoy">
             </button>
             <div class="side-by-side">
               <button onclick="location.href='placeholder.html'">
-                <img src="Logos/SocMed/ig.png" alt="Instagram" height="30px" width="30px">
+                <img src="Logos/SocMed/ig.png" alt="Instagram">
               </button>
               <button onclick="location.href='https://www.facebook.com/profile.php?id=61570464069710'">
-                <img src="Logos/SocMed/fb.png" alt="Facebook" height="30px" width="30px">
+                <img src="Logos/SocMed/fb.png" alt="Facebook">
               </button>
               <button onclick="location.href='https://x.com/B2Pinoy'">
-                <img src="Logos/SocMed/x.png" alt="X" height="30px" width="30px">
+                <img src="Logos/SocMed/x.png" alt="X">
               </button>
               <button onclick="location.href='placeholder.html'">
-                <img src="Logos/SocMed/linkedin.png" alt="Linkedin" height="30px" width="30px">
+                <img src="Logos/SocMed/linkedin.png" alt="Linkedin">
               </button>
             </div>
           </div>

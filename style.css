@@ -30,14 +30,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 header img {
   width: 10.625rem;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 header h1 {
@@ -89,10 +89,10 @@ header h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 1.25rem;
   border: 1px solid #888;
-  border-radius: 30px;
-  width: 500px;
+  border-radius: 1.875rem;
+  width: 21.875rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001;
@@ -113,6 +113,23 @@ header h1 {
   color: #007BFF;
 }
 
+.modal h2 {
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.modal h5 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 0.875rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
 .close {
   color: #aaa;
   float: right;
@@ -125,7 +142,7 @@ header h1 {
 }
 
 .catchphrase {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .search-container {
@@ -157,7 +174,7 @@ header h1 {
   outline: none;
   border: none;
   background: transparent;
-  width: 800px;
+  width: 50rem;
 }
 
 .search:focus-within {
@@ -190,7 +207,7 @@ header h1 {
   width: auto;
   height: 12.5rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 
@@ -210,7 +227,7 @@ section.active {
 
 .details img {
   width: 100%;
-  max-width: 300px;
+  max-width: 18.75rem;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -267,14 +284,23 @@ footer p {
 }
 
 .left-section {
-  text-align: left;
-  margin-left: 50px;
+  margin-left: 3.125rem;
+}
+
+.left-section img {
+  width: 13.4375rem;
+  height: auto;
 }
 
 .left-section .side-by-side {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.side-by-side img {
+  width: 1.875rem;
+  height: auto;
 }
 
 .right-section {
@@ -355,10 +381,16 @@ footer p {
 }
 
 .logo {
-  width: 350px;
+  width: 21.875rem;
   height: auto;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .images-section {
@@ -369,11 +401,11 @@ footer p {
 }
 
 .small-img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: auto;
   border-radius: 8px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -399,4 +431,4 @@ footer p {
   margin-top: 0px;
   margin-bottom: 5px;
   color: #000;
-}
+}/*# sourceMappingURL=style.css.map */
