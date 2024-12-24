@@ -34,8 +34,8 @@ class B2PHeader extends HTMLElement {
             <div id="popup" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="hidePopup()">&times;</span>
-                <h2>Questions?</h2>
-                <p style ="font-size:2rem; mar">Hit us up!</h4>
+                <h2 style="margin-bottom: 0px;">Questions?</h2>
+                <p style ="font-size:2rem; margin-bottom: 40px;">Hit us up!</h4>
                 <h5 style="margin-bottom: 8px;">Listing Inquiries</h5>
                 <p><u>sales.b2pinoy@gmail.com</u></p>
                 <h5 style="margin-bottom: 8px;">Customer Support</h5>
