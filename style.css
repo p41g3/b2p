@@ -359,64 +359,45 @@ footer p {
 /* suppliers specific page: */
 .supplier {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
 
-.container {
+.coomtainer {
   display: flex;
+  flex-direction: column;
   background-color: #fff;
-  width: -moz-max-content;
-  width: max-content;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.container {
+  display: flex;
+  margin: 20px;
 }
 
 .left-sectionn {
   flex: 1;
   text-align: center;
-  padding: 20px;
 }
 
 .logo {
-  width: 21.875rem;
+  width: 21.5rem;
   height: auto;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-right: 20px
 }
 
 .logo:hover {
   transform: scale(1.05);
 }
 
-.images-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.small-img {
-  width: 5rem;
-  height: auto;
-  border-radius: 8px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.small-img:hover {
-  transform: scale(1.1);
-}
-
 .right-sectionn {
   flex: 1;
-  padding: 30px;
   text-align: left;
 }
 
@@ -431,4 +412,27 @@ footer p {
   margin-top: 0px;
   margin-bottom: 5px;
   color: #000;
+}
+
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  gap: 10px;
+  justify-content: center;
+  margin: 0px 20px 20px 20px;
+}
+
+.small-img {
+  width: 5rem;
+  height: auto;
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.small-img:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */
