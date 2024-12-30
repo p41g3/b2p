@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER */
 header {
   background-color: #fff;
   padding: 1rem 2rem;
@@ -53,7 +54,9 @@ header h1 {
   width: 100%;
 }
 
-.header-links a, .header-links button { /* I can optimize this pa a lot fuck*/
+/* I can optimize this pa a lot fuck */
+/* ill ask zo muna if i should have a link ba for the logo */
+.header-links a, .header-links button { 
   text-decoration: none;
   color: #333;
   background: none;
@@ -71,6 +74,8 @@ header h1 {
   pointer-events: none;
 }
 
+/* POP-UP */
+/* bro this is so messy like */
 .modal {
   display: none;
   position: fixed;

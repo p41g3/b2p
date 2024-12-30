@@ -1,12 +1,10 @@
 // reuse most of <head>
-// tngina i need to make the title ng tab separate pala
 class B2PHead extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>B2Pinoy.com</title>
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"/>
     `;
   }
@@ -22,7 +20,7 @@ class B2PHeader extends HTMLElement {
               <header>
                 <div class="header-links">
                   <button onclick="location.href='index.html'">
-                    <img src="Logos/b2p.png" alt="Find Suppliers"/>
+                    <img src="pics/logos/b2p.png" alt="Find Suppliers"/>
                   </button>
                   <a href="aboutus.html">About Us</a>
                   <a href="faqs.html">FAQs</a>
@@ -55,20 +53,20 @@ class B2PFooter extends HTMLElement {
         <footer class="footer" id="footer">
           <div class="left-section">
             <button onclick="location.href='placeholder.html'">
-              <img src="Logos/b2p.png" alt="B2Pinoy">
+              <img src="pics/logos/b2p.png" alt="B2Pinoy">
             </button>
             <div class="side-by-side">
               <button onclick="location.href='placeholder.html'">
-                <img src="Logos/SocMed/ig.png" alt="Instagram">
+                <img src="pics/logos/ig.png" alt="Instagram">
               </button>
               <button onclick="location.href='https://www.facebook.com/profile.php?id=61570464069710'">
-                <img src="Logos/SocMed/fb.png" alt="Facebook">
+                <img src="pics/logos/fb.png" alt="Facebook">
               </button>
               <button onclick="location.href='https://x.com/B2Pinoy'">
-                <img src="Logos/SocMed/x.png" alt="X">
+                <img src="pics/logos/x.png" alt="X">
               </button>
               <button onclick="location.href='placeholder.html'">
-                <img src="Logos/SocMed/linkedin.png" alt="Linkedin">
+                <img src="pics/logos/linkedin.png" alt="Linkedin">
               </button>
             </div>
           </div>
@@ -96,3 +94,19 @@ class B2PFooter extends HTMLElement {
 
 customElements.define('b2p-footer', B2PFooter);
 
+// show popup
+function showPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+// hide popup
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+// close popup when click x
+window.onclick = function (event) {
+  if (event.target === document.getElementById("popup")) {
+    hidePopup();
+  }
+};
