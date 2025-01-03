@@ -160,8 +160,7 @@ header h1 {
 
 .search {
   --padding: 15px;
-  width: -moz-max-content;
-  width: max-content;
+  width: 50rem; 
   display: flex;
   align-items: center;
   padding: var(--padding);
@@ -169,6 +168,7 @@ header h1 {
   background: #e7e7e7;
   transition: background 0.25s, box-shadow 0.25s;
   margin: 0 auto;
+  position: relative;  /
 }
 
 .search input {
@@ -179,7 +179,7 @@ header h1 {
   outline: none;
   border: none;
   background: transparent;
-  width: 50rem;
+  width: 100%;  
 }
 
 .search:focus-within {
@@ -194,6 +194,39 @@ header h1 {
 .search::placeholder,
 .search-icon {
   color: rgba(0, 0, 0, 0.5);
+}
+
+form {
+  position: relative;
+}
+
+/* autocomplete ng search bar */
+#suggestions-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 100;
+  padding: 0px;
+  margin-top: 5px;
+}
+
+#suggestions-list li {
+  list-style: none;
+  padding: 10px;
+  margin: 0px;
+  cursor: pointer;
+  text-align: left;
+}
+
+#suggestions-list li:hover {
+  background-color: #f1f1f1;
 }
 
 .image-container a {

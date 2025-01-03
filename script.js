@@ -110,3 +110,75 @@ window.onclick = function (event) {
     hidePopup();
   }
 };
+
+// SEARCH BAR
+
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    { name: "Hollow Blocks", link: "placeholder.html" },
+    { name: "Manila Hardware", link: "manilahardware.html" },
+    { name: "Jollibee", link: "placeholder.html" },
+    { name: "Potato Corner", link: "potatocorner.html" },
+    { name: "Siomai King", link: "placeholder.html" },
+    { name: "Ilao Ilao", link: "placeholder.html" },
+    { name: "Dream Space", link: "dreamspace.html" },
+    { name: "Automotive Detailing", link: "placeholder.html" },
+    { name: "Jobs", link: "jobs.html" },
+  ];
+
+  const input = document.querySelector(".search-input");
+  const suggestionsList = document.getElementById("suggestions-list");
+
+  input.addEventListener("input", () => {
+    const query = input.value.toLowerCase();
+    console.log("Input value:", query);  // Debugging
+
+    suggestionsList.innerHTML = "";  // Clear previous suggestions
+
+    if (query.trim() !== "") {
+      // Filter the data array based on the user's input
+      const suggestions = data.filter((item) =>
+        item.name.toLowerCase().includes(query)
+      );
+      console.log("Filtered suggestions:", suggestions); // Debugging
+
+      if (suggestions.length > 0) {
+        suggestionsList.style.display = "block"; // Show suggestions
+        // Loop through the suggestions and append them to the list
+        suggestions.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item.name;
+          li.dataset.link = item.link;  // Store the link for each suggestion
+          suggestionsList.appendChild(li);
+        });
+      } else {
+        const noMatch = document.createElement("li");
+        noMatch.textContent = "No matches found";
+        noMatch.style.color = "#888";
+        suggestionsList.appendChild(noMatch);
+      }
+    } else {
+      suggestionsList.style.display = "none"; // Hide suggestions if input is empty
+    }
+  });
+
+  // Handle suggestion click to navigate
+  suggestionsList.addEventListener("click", (e) => {
+    if (e.target.tagName === "LI" && e.target.dataset.link) {
+      window.location.href = e.target.dataset.link;  // Redirect to the link of the selected suggestion
+    }
+  });
+
+  // Hide suggestions when input loses focus
+  input.addEventListener("blur", () => {
+    setTimeout(() => {
+      suggestionsList.style.display = "none"; // Hide the suggestions list after a short delay
+      suggestionsList.innerHTML = ""; // Clear suggestions after losing focus
+    }, 200);
+  });
+
+  // Keep suggestions visible if user is still interacting with the suggestions list
+  suggestionsList.addEventListener("mouseover", () => {
+    suggestionsList.style.display = "block";
+  });
+});
