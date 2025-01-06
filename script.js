@@ -33,7 +33,7 @@ class B2PHeader extends HTMLElement {
               <div class="modal-content">
                 <span class="close" onclick="hidePopup()">&times;</span>
                 <h2 style="margin-bottom: 0px;">Questions?</h2>
-                <p style ="font-size:2rem; margin-bottom: 40px;">Hit us up!</h4>
+                <p style ="font-size:1.75rem; margin-bottom: 40px;">Hit us up!</h4>
                 <h5 style="margin-bottom: 8px;">Listing Inquiries</h5>
                 <p><u>sales.b2pinoy@gmail.com</u></p>
                 <h5 style="margin-bottom: 8px;">Customer Support</h5>
@@ -131,24 +131,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   input.addEventListener("input", () => {
     const query = input.value.toLowerCase();
-    console.log("Input value:", query);  // Debugging
+    console.log("Input value:", query); 
 
-    suggestionsList.innerHTML = "";  // Clear previous suggestions
+    suggestionsList.innerHTML = "";  
 
     if (query.trim() !== "") {
-      // Filter the data array based on the user's input
       const suggestions = data.filter((item) =>
         item.name.toLowerCase().includes(query)
       );
-      console.log("Filtered suggestions:", suggestions); // Debugging
+      console.log("Filtered suggestions:", suggestions);
 
       if (suggestions.length > 0) {
-        suggestionsList.style.display = "block"; // Show suggestions
-        // Loop through the suggestions and append them to the list
+        suggestionsList.style.display = "block"; 
         suggestions.forEach((item) => {
           const li = document.createElement("li");
           li.textContent = item.name;
-          li.dataset.link = item.link;  // Store the link for each suggestion
+          li.dataset.link = item.link;  
           suggestionsList.appendChild(li);
         });
       } else {
@@ -158,26 +156,25 @@ document.addEventListener("DOMContentLoaded", () => {
         suggestionsList.appendChild(noMatch);
       }
     } else {
-      suggestionsList.style.display = "none"; // Hide suggestions if input is empty
+      suggestionsList.style.display = "none"; 
     }
   });
 
-  // Handle suggestion click to navigate
   suggestionsList.addEventListener("click", (e) => {
     if (e.target.tagName === "LI" && e.target.dataset.link) {
-      window.location.href = e.target.dataset.link;  // Redirect to the link of the selected suggestion
+      window.location.href = e.target.dataset.link;
     }
   });
 
-  // Hide suggestions when input loses focus
+  // hide suggestions when user is off it
   input.addEventListener("blur", () => {
     setTimeout(() => {
-      suggestionsList.style.display = "none"; // Hide the suggestions list after a short delay
-      suggestionsList.innerHTML = ""; // Clear suggestions after losing focus
+      suggestionsList.style.display = "none";
+      suggestionsList.innerHTML = "";
     }, 200);
   });
 
-  // Keep suggestions visible if user is still interacting with the suggestions list
+  // keep suggestions visible if mouse is over it
   suggestionsList.addEventListener("mouseover", () => {
     suggestionsList.style.display = "block";
   });
