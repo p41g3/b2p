@@ -255,6 +255,27 @@ form {
   display: block;
 }
 
+/* landing page: featured suppliers*/
+.featured-suppliers a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.featured-suppliers a:hover {
+  transform: scale(1.1);
+}
+
+.featured-suppliers a img {
+  width: auto;
+  height: 12.125rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
 section {
   display: none;
   padding: 2rem;
