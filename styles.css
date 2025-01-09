@@ -255,6 +255,28 @@ form {
   display: block;
 }
 
+/* main landing page buttons */
+
+.main-lp a /* lp - landing page */ {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.main-lp a:hover {
+  transform: scale(1.1);
+}
+
+.main-lp a img {
+  width: auto;
+  height: 19rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
 /* landing page: featured suppliers*/
 .featured-suppliers a {
   display: inline-block;
