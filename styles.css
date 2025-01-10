@@ -153,6 +153,7 @@ header h1 {
   margin-top: 3.125rem;
 }
 
+/* search bar */
 .search-container {
   display: flex;
   justify-content: center;
@@ -203,7 +204,7 @@ form {
   position: relative;
 }
 
-/* autocomplete ng search bar */
+/* autocomplete of search bar */
 #suggestions-list {
   display: none;
   position: absolute;

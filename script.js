@@ -128,25 +128,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const input = document.querySelector(".search-input");
   const suggestionsList = document.getElementById("suggestions-list");
+  const form = document.getElementById("search-form");
 
   input.addEventListener("input", () => {
     const query = input.value.toLowerCase();
-    console.log("Input value:", query); 
-
-    suggestionsList.innerHTML = "";  
+    suggestionsList.innerHTML = "";
 
     if (query.trim() !== "") {
       const suggestions = data.filter((item) =>
         item.name.toLowerCase().includes(query)
       );
-      console.log("Filtered suggestions:", suggestions);
 
       if (suggestions.length > 0) {
-        suggestionsList.style.display = "block"; 
+        suggestionsList.style.display = "block";
         suggestions.forEach((item) => {
           const li = document.createElement("li");
           li.textContent = item.name;
-          li.dataset.link = item.link;  
+          li.dataset.link = item.link;
           suggestionsList.appendChild(li);
         });
       } else {
@@ -156,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         suggestionsList.appendChild(noMatch);
       }
     } else {
-      suggestionsList.style.display = "none"; 
+      suggestionsList.style.display = "none";
     }
   });
 
@@ -166,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // hide suggestions when user is off it
   input.addEventListener("blur", () => {
     setTimeout(() => {
       suggestionsList.style.display = "none";
@@ -174,8 +171,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 200);
   });
 
-  // keep suggestions visible if mouse is over it
   suggestionsList.addEventListener("mouseover", () => {
     suggestionsList.style.display = "block";
+  });
+
+  // handle form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchTerm = input.value.trim();
+    if (searchTerm) {
+      window.location.href = `results.html?search=${encodeURIComponent(searchTerm)}`;
+    }
   });
 });

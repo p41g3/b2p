@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <title>Search Results</title>
+    <b2p-head></b2p-head>
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- Header -->
+        <b2p-header></b2p-header>
+
+        <div class="content">
+            <h1 id="search-results"></h1>
+            <div class="image-container" id="results-container"></div>
+            <button class="back-button" onclick="location.href='index.html'">Back</button>
+        </div>
+      
+        <!-- Footer -->
+        <b2p-footer></b2p-footer>
+    </div>
+  
+
+  <script>
+    const data = [
+      {
+        name: "Potato Corner",
+        img: "pics/franchises/potato-corner/thumbnail.png",
+        link: "potatocorner.html",
+      },
+      {
+        name: "Jollibee",
+        img: "pics/franchises/jollibee/thumbnail.png",
+        link: "jollibee.html",
+      },
+      {
+        name: "Dream Space",
+        img: "pics/franchises/dream-space/thumbnail.png",
+        link: "dreamspace.html",
+      },
+    ];
+
+    // get the search term from the URL
+    const params = new URLSearchParams(window.location.search);
+    const searchTerm = params.get("search");
+    const resultsContainer = document.getElementById("results-container");
+    const searchResultsHeader = document.getElementById("search-results");
+
+    if (searchTerm) {
+      searchResultsHeader.textContent = `Results for "${searchTerm}"`;
+
+      // filter results based on the search term
+      const results = data.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      // display matching results
+      if (results.length > 0) {
+        results.forEach((item) => {
+          const anchor = document.createElement("a");
+          anchor.href = item.link;
+
+          const img = document.createElement("img");
+          img.src = item.img;
+          img.alt = item.name;
+
+          anchor.appendChild(img);
+          resultsContainer.appendChild(anchor);
+        });
+      } else {
+        resultsContainer.textContent = "No matching results found.";
+      }
+    } else {
+      searchResultsHeader.textContent = "No search term provided.";
+      resultsContainer.textContent = "Please try searching for something.";
+    }
+  </script>
+</body>
+</html>
