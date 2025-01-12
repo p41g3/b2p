@@ -10,12 +10,16 @@
   <!-- Header -->
   <b2p-header></b2p-header>
 
-  <!-- Search Bar -->
   <h1 class="catchphrase"> Search for Philippine-based Businesses! </h1>
-  <div class="search">
-    <span class="search-icon material-symbols-outlined">search</span>
-    <input class="search-input" type="search" placeholder="e.g. Got Clothing, Restaurant Franchise, Packaging, etc.">
-    <ul id="suggestions-list"></ul>
+  <!-- Search Bar -->
+  <div class="search-container">
+    <form id="search-form" action="results.html" method="get" data-category="service">
+      <div class="search">
+        <span class="search-icon material-symbols-outlined">search</span>
+        <input class="search-input" type="search" name="search" placeholder="e.g. Got Clothing, Restaurant Franchise, Packaging, etc.">
+        <ul id="suggestions-list"></ul>
+      </div>
+    </form>
   </div>
     
 

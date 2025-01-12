@@ -115,16 +115,16 @@ window.onclick = function (event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
-    { name: "Hollow Blocks", link: "placeholder.html" },
-    { name: "Manila Hardware", link: "manilahardware.html" },
-    { name: "Jollibee", link: "placeholder.html" },
-    { name: "Potato Corner", link: "potatocorner.html" },
-    { name: "Siomai King", link: "placeholder.html" },
-    { name: "Ilao Ilao", link: "placeholder.html" },
-    { name: "Dream Space", link: "dreamspace.html" },
-    { name: "Automotive Detailing", link: "placeholder.html" },
-    { name: "Jobs", link: "jobs.html" },
+    { name: "Hollow Blocks", link: "placeholder.html", category: "supplier" },
+    { name: "Manila Hardware", link: "manilahardware.html", category: "supplier" },
+    { name: "Jollibee", link: "placeholder.html", category: "franchise" },
+    { name: "Potato Corner", link: "potatocorner.html", category: "franchise" },
+    { name: "Siomai King", link: "placeholder.html", category: "franchise" },
+    { name: "Ilao Ilao", link: "placeholder.html", category: "franchise" },
+    { name: "Dream Space", link: "dreamspace.html", category: "service" },
+    { name: "Automotive Detailing", link: "placeholder.html", category: "service" },
   ];
+  
 
   const input = document.querySelector(".search-input");
   const suggestionsList = document.getElementById("suggestions-list");
@@ -134,29 +134,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const query = input.value.toLowerCase();
     suggestionsList.innerHTML = "";
 
-    if (query.trim() !== "") {
-      const suggestions = data.filter((item) =>
-        item.name.toLowerCase().includes(query)
-      );
-
-      if (suggestions.length > 0) {
-        suggestionsList.style.display = "block";
-        suggestions.forEach((item) => {
-          const li = document.createElement("li");
-          li.textContent = item.name;
-          li.dataset.link = item.link;
-          suggestionsList.appendChild(li);
-        });
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase();
+      const category = form.getAttribute("data-category");
+      suggestionsList.innerHTML = "";
+    
+      if (query.trim() !== "") {
+        // Filter by both query and category
+        const suggestions = data.filter(
+          (item) =>
+            item.name.toLowerCase().includes(query) &&
+            (!category || item.category === category)
+        );
+    
+        if (suggestions.length > 0) {
+          suggestionsList.style.display = "block";
+          suggestions.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item.name;
+            li.dataset.link = item.link;
+            suggestionsList.appendChild(li);
+          });
+        } else {
+          const noMatch = document.createElement("li");
+          noMatch.textContent = "No matches found";
+          noMatch.style.color = "#888";
+          suggestionsList.appendChild(noMatch);
+        }
       } else {
-        const noMatch = document.createElement("li");
-        noMatch.textContent = "No matches found";
-        noMatch.style.color = "#888";
-        suggestionsList.appendChild(noMatch);
+        suggestionsList.style.display = "none";
       }
-    } else {
-      suggestionsList.style.display = "none";
-    }
-  });
+    });
+    
 
   suggestionsList.addEventListener("click", (e) => {
     if (e.target.tagName === "LI" && e.target.dataset.link) {
@@ -179,8 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchTerm = input.value.trim();
+    const category = form.getAttribute("data-category");
     if (searchTerm) {
-      window.location.href = `results.html?search=${encodeURIComponent(searchTerm)}`;
+      let queryString = `results.html?search=${encodeURIComponent(searchTerm)}`;
+      if (category) {
+        queryString += `&category=${encodeURIComponent(category)}`;
+      }
+      window.location.href = queryString;
     }
-  });
+  });  
 });
+})

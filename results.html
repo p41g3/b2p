@@ -30,12 +30,14 @@
           img: "pics/suppliers/manila-hardware/thumbnail.png",
           link: "manilahardware.html",
           tags: ["galvanized steel", "construction", "building", "material"],
+          category: "supplier",
         },  
         {
           name: "Hollow Blocks",
           img: "pics/suppliers/idk/thumbnail.png",
           link: "placeholder.html",
           tags: ["cement", "construction", "building", "material"],
+          category: "supplier",
         }, 
       // franchises
         {
@@ -43,24 +45,28 @@
           img: "pics/franchises/jollibee/thumbnail.png",
           link: "placeholder.html",
           tags: ["fast food", "chicken", "burger", "restaurant"],
+          category: "franchise",
         },
         {
           name: "Potato Corner",
           img: "pics/franchises/potato-corner/thumbnail.png",
           link: "potatocorner.html",
           tags: ["fries", "potato", "snacks", "corner"],
+          category: "franchise",
         },
         {
           name: "Siomai King",
           img: "pics/franchises/siomai-king/thumbnail.png",
           link: "placeholder.html",
           tags: ["fast food", "dumplings", "chinese"],
+          category: "franchise",
         },
         {
           name: "Ilao Ilao",
           img: "pics/franchises/ilao-ilao/thumbnail.png",
           link: "placeholder.html",
           tags: ["snacks", "ice cream", "yogurt"],
+          category: "franchise",
         },
       // services
         {
@@ -68,12 +74,14 @@
           img: "pics/services/dream-space/thumbnail.png",
           link: "dreamspace.html",
           tags: ["house cleaning", "home cleaning", "service"],
+          category: "service",
         }, 
         {
           name: "Automotive Detailing",
           img: "pics/services/idk/thumbnail.png",
           link: "placeholder.html",
           tags: ["mechanic", "vehicle", "car"],
+          category: "service",
         }, 
 
         
@@ -81,31 +89,33 @@
     
       const params = new URLSearchParams(window.location.search);
       const searchTerm = params.get("search");
+      const category = params.get("category");
       const resultsContainer = document.getElementById("results-container");
       const searchResultsHeader = document.getElementById("search-results");
-    
+
       if (searchTerm) {
         searchResultsHeader.textContent = `Results for "${searchTerm}"`;
-    
-        // filter results based on the search term
+
+        // filter results based on the search term and category
         const results = data.filter((item) => {
           const lowerCaseSearch = searchTerm.toLowerCase();
-          return (
+          const isInCategory = category ? item.category === category : true; // category stuff
+          const matchesSearch =
             item.name.toLowerCase().includes(lowerCaseSearch) ||
-            item.tags.some((tag) => tag.toLowerCase().includes(lowerCaseSearch))
-          );
+            item.tags.some((tag) => tag.toLowerCase().includes(lowerCaseSearch));
+          return isInCategory && matchesSearch;
         });
-    
+
         // display matching results
         if (results.length > 0) {
           results.forEach((item) => {
             const anchor = document.createElement("a");
             anchor.href = item.link;
-    
+
             const img = document.createElement("img");
             img.src = item.img;
             img.alt = item.name;
-    
+
             anchor.appendChild(img);
             resultsContainer.appendChild(anchor);
           });
