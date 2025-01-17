@@ -268,8 +268,8 @@ form {
 }
 
 .main-lp a img {
-  width: auto;
-  height: 19rem;
+  width: 24rem;
+  height: 16rem;
   -o-object-fit: cover;
   object-fit: cover;
   display: block;
@@ -295,6 +295,133 @@ form {
   object-fit: cover;
   display: block;
 }
+
+/* featured franchises grid */
+
+.ff {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: masonry;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: 1rem 9%;
+  align-items: stretch;
+}
+
+.ff a {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ff a:hover {
+  transform: scale(1.1);
+}
+
+.ff a img {
+  width: auto;
+  height: 11rem;
+  object-fit: cover;
+}
+
+@media (max-width: 1440px) {
+  .ff {
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .ff a img {
+    height: auto;
+    max-height: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ff {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .ff a img {
+    height: auto;
+    max-height: 6rem;
+  }
+}
+
+/* featured suppliers grid */
+.fsp {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: masonry;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1rem 9%;
+  align-items: stretch;
+}
+
+.fsp a {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsp a:hover {
+  transform: scale(1.1);
+}
+
+.fsp a img {
+  width: auto;
+  height: 10rem;
+  object-fit: cover;
+}
+
+@media (max-width: 1440px) {
+  .fsp {
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .fsp a img {
+    height: auto;
+    max-height: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fsp {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .fsp a img {
+    height: auto;
+    max-height: 6rem;
+  }
+}
+
+/* landing page: featured suppliers (COPY - REMOVE AFTER) */
+.featured-suppliers a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.featured-suppliers a:hover {
+  transform: scale(1.1);
+}
+
+.featured-suppliers a img {
+  width: auto;
+  height: 12.125rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
 
 section {
   display: none;
