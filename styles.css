@@ -354,7 +354,7 @@ form {
   display: grid;
   gap: 1rem;
   grid-template-rows: masonry;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   margin: 1rem 9%;
   align-items: stretch;
 }
@@ -373,31 +373,31 @@ form {
 
 .fsp a img {
   width: auto;
-  height: 10rem;
+  height: 12.125rem;
   object-fit: cover;
 }
 
 @media (max-width: 1440px) {
   .fsp {
     gap: 0.75rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
   .fsp a img {
     height: auto;
-    max-height: 8rem;
+    max-height: 8.75rem;
   }
 }
 
 @media (max-width: 1024px) {
   .fsp {
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .fsp a img {
     height: auto;
-    max-height: 6rem;
+    max-height: 6.5rem;
   }
 }
 
