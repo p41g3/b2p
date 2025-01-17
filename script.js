@@ -18,15 +18,15 @@ class B2PHeader extends HTMLElement {
         this.innerHTML = `
               <!-- Header Section -->
               <header>
-                <div class="header-links">
-                  <button onclick="location.href='index.html'">
-                    <img src="pics/logos/b2p.png" alt="Find Suppliers"/>
-                  </button>
-                  <a href="aboutus.html">About Us</a>
-                  <a href="faqs.html">FAQs</a>
-                  <span class="modal-header" onclick="showPopup()">Customer Support</span>
-                </div>
-              </header>
+                <img src="pics/logos/b2p.png" alt="B2P">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><span class="modal-header" onclick="showPopup()">Customer Support</span></li>
+                    </ul>
+                </nav>
+            </header>
 
             <!-- Modal -->
             <div id="popup" class="modal">

@@ -6,34 +6,33 @@ html, body {
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* to put header and footer on the top */
 .main-content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* for content */
 .content {
   flex: 1;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #f9f9f9;
-  overflow-x: hidden;
-}
-
 /* HEADER */
 header {
-  background-color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1.875rem;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header img {
@@ -43,22 +42,20 @@ header img {
   object-fit: cover;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.header-links {
+.nav-links {
+  list-style: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
 
-/* I can optimize this pa a lot fuck */
-/* ill ask zo muna if i should have a link ba for the logo */
-.header-links a, .header-links button { 
+.nav-links li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.nav-links a { 
   text-decoration: none;
   color: #333;
   background: none;
@@ -67,7 +64,7 @@ header h1 {
   transition: color 0.3s ease;
 }
 
-.header-links a:hover, .header-links button:hover {
+.nav-links a:hover {
   color: #007BFF;
 }
 
@@ -422,6 +419,7 @@ footer p {
 /* literally same as footer a, ill work on combining the two though...*/
 .modal-footer {
   text-decoration: none;
+  cursor: pointer;
   font-size: 0.875rem;
   color: #333;
   transition: color 0.3s ease;
