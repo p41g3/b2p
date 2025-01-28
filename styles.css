@@ -36,10 +36,8 @@ header {
 }
 
 header img {
-  width: 10.625rem;
+  width: clamp(5rem, 3.702rem + 5.769vw, 10.625rem); /* i like */
   height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .nav-links {
@@ -62,6 +60,7 @@ header img {
   border: none;
   cursor: pointer;
   transition: color 0.3s ease;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
 }
 
 .nav-links a:hover {
@@ -107,7 +106,7 @@ header img {
 /* is there a way to combine them all?? */
 .modal-header {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 0.692rem + 0.256vw, 1rem);
   color: #333;
   cursor: pointer;
   transition: color 0.3s ease;
