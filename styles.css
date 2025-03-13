@@ -547,6 +547,60 @@ form {
   }
 }
 
+/* featured suppliers (MAIN) grid */
+
+.fspm {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: masonry;
+  grid-template-columns: repeat(4, 365px);
+  margin: 1rem 9%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.fspm a {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fspm a:hover {
+  transform: scale(1.1);
+}
+
+.fspm a img {
+  width: auto;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+@media (max-width: 1650px) {
+  .fspm {
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .fspm a img {
+    height: auto;
+    max-height: 10rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fspm {
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+
+  .fspm a img {
+    height: auto;
+    max-height: 9rem;
+  }
+}
+
 section {
   display: none;
   padding: 2rem;
