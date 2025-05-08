@@ -18,7 +18,7 @@ class B2PHeader extends HTMLElement {
         this.innerHTML = `
               <!-- Header Section -->
               <header>
-                <img src="pics/logos/b2p.png" alt="B2P">
+                <a href="index.html"><img src="pics/logos/b2p.png" alt="Logo"></a>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="aboutus.html">About Us</a></li>
